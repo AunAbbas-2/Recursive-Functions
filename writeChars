@@ -1,0 +1,22 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+string writeChars(int n){
+    if(n == 1){
+        return "*";
+    }
+    if(n == 2){
+        return "**";
+    }
+
+    return "<" + writeChars(n-2) + ">";
+
+}
+
+int main(){
+    int n;
+    cout<<"Enter value of n: ";
+    cin>>n;
+    cout<<writeChars(n);
+}
