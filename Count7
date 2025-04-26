@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int count7(int n)
+{
+    if (n == 0)
+    {
+        return 0;
+    }
+    if (n % 10 == 7)
+    {
+        return (1 + count7(n / 10));
+    }
+    return count7(n / 10);
+}
+
+int main()
+{
+    int n;
+    cout << "Enter the number: ";
+    cin >> n;
+    int count = count7(n);
+    cout << "The number of time 7 reoccured in your given number is " << count << '.' << endl;
+    return 0;
+}
