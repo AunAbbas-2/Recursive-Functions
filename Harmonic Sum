@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+double sumTo(int n)
+{
+    if (n == 0)
+    {
+        return 0;
+    }
+    double x = static_cast<double>(n);
+    return (1.0 / x + sumTo(n - 1));
+}
+
+int main()
+{
+    int n;
+    cout << "Enter the number you want to find the harmonic sequence of: ";
+    cin >> n;
+    cout << endl;
+    double harmonicsequence = sumTo(n);
+    cout << "The Harmonic Sequence of the the number " << n << " is: " << endl
+         << harmonicsequence << endl;
+
+    return 0;
+}
